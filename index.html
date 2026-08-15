@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UniAsk</title>
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="https://img.magnific.com/free-psd/cartoon-question-mark-isolated_23-2151568565.jpg?semt=ais_hybrid&w=740&q=80"  type="image/jpeg">
+</head>
+
+<body>
+    <header class="border-bottom">
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
+
+                <!-- Логотип -->
+                <a class="navbar-brand fw-bold" href="index.html">UniAsk</a>
+                <img src="photo.png" alt="avatar" width="32" height="32" class="rounded-circle object-fit-cover me-2">
+                <!-- Кнопка-бургер для мобильных экранов -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+
+                    <!-- Поисковая строка -->
+                    <form class="d-flex mx-auto my-2 my-lg-0" style="width: 40%;" role="search">
+                        <input class="form-control" type="search" placeholder="Искать вопросы..." aria-label="Search">
+                    </form>
+
+                    <!-- Юзерблок: авторизован -->
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="me.jpg"  width="48" height="48" class="rounded-circle object-fit-cover me-2">
+                                Андрей
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Настройки профиля</a></li>
+                                <li><a class="dropdown-item" href="#">Задать вопрос</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Выйти</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+      <!-- MAIN CONTENT -->
+    <main class="container my-4">
+        <div class="row">
+            <!-- Левая колонка: список вопросов -->
+            <div class="col-10">
+
+                <!-- Карточка одного вопроса -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body p-4">
+
+                        <!-- Аватар + имя + заголовок вопроса -->
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="stas.jpg" width="48" height="48" class="rounded-circle object-fit-cover me-2">
+                            <span class="fw-semibold text-muted me-5 fs-5">Стасик</span>
+                            <h5 class="mb-0">Как правильно настроить Bootstrap grid для адаптивной вёрстки?</h5>
+                        </div>
+
+                        <!-- Неполное описание -->
+                        <p class="text-muted mb-3">
+                            Пытаюсь сделать так, чтобы колонки на мобильных экранах перестраивались друг под друга,
+                            но у меня почему-то ломается разметка при уменьшении окна браузера...
+                        </p>
+
+                        <!-- Кнопка ответов + тег -->
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="btn rounded-pill fw-semibold" style="background-color:#FFD180; color:#7A4A00;">
+                                Ответы | 5
+                            </a>
+                            <a href="#" class="text-decoration-none rounded-pill px-3 py-2">
+                                #Bootstrap
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Карточка вопроса: Митяй -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="lysyy.jpg" width="48" height="48" class="rounded-circle object-fit-cover me-2">
+                            <span class="fw-semibold text-muted me-5 fs-5">Митяй</span>
+                            <h5 class="mb-0">Почему не работает dropdown из Bootstrap, если не подключить JS?</h5>
+                        </div>
+                        <p class="text-muted mb-3">
+                            Сделал всё по документации, классы стоят правильные, а меню просто не открывается по клику.
+                            Ошибок в консоли тоже нет...
+                        </p>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="btn rounded-pill fw-semibold" style="background-color:#FFD180; color:#7A4A00;">
+                                Ответы | 2
+                            </a>
+                            <a href="#" class="text-decoration-none rounded-pill px-3 py-2">
+                                #JavaScript
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка вопроса: Переросток -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="cock.jpg" width="48" height="48" class="rounded-circle object-fit-cover me-2">
+                            <span class="fw-semibold text-muted me-5 fs-5">Переросток</span>
+                            <h5 class="mb-0">В чём разница между margin и padding, если оба дают отступ?</h5>
+                        </div>
+                        <p class="text-muted mb-3">
+                            Вроде оба свойства двигают элементы, но в некоторых случаях margin схлопывается,
+                            а padding — нет. Не могу понять логику...
+                        </p>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="btn rounded-pill fw-semibold" style="background-color:#FFD180; color:#7A4A00;">
+                                Ответы | 8
+                            </a>
+                            <a href="#" class="text-decoration-none rounded-pill px-3 py-2">
+                                #CSS
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка вопроса: Никитосик -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="pazan.jpg" width="48" height="48" class="rounded-circle object-fit-cover me-2">
+                            <span class="fw-semibold text-muted me-5 fs-5">Никитосик</span>
+                            <h5 class="mb-0">Как лучше хранить пароли пользователей в базе данных?</h5>
+                        </div>
+                        <p class="text-muted mb-3">
+                            Слышал, что хранить в открытом виде — плохая идея, но не понимаю, чем хеширование
+                            отличается от шифрования и что использовать...
+                        </p>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="btn rounded-pill fw-semibold" style="background-color:#FFD180; color:#7A4A00;">
+                                Ответы | 12
+                            </a>
+                            <a href="#" class="text-decoration-none rounded-pill px-3 py-2">
+                                #Python
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пагинатор -->
+                <nav aria-label="Навигация по страницам">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">Назад</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Вперёд</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+             <aside class="col-2">
+                <!-- Популярные теги -->
+                    <div class="card-header bg-white fw-bold">Популярные теги</div>
+
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="text-decoration-none rounded-pill px-3 py-2" style="background-color:#FFE0B2; color:#7A4A0B;">Python</a>
+                        <a href="#" class="text-decoration-none rounded-pill px-3 py-2" style="background-color:#FFCCBC; color:#8A3B1F;">Django</a>
+                        <a href="#" class="text-decoration-none rounded-pill px-3 py-2" style="background-color:#FFECB3; color:#7A5C00;">Bootstrap</a>
+                        <a href="#" class="text-decoration-none rounded-pill px-3 py-2" style="background-color:#FFAB91; color:#7A2E00;">HTML</a>
+                        <a href="#" class="text-decoration-none rounded-pill px-3 py-2" style="background-color:#FFD180; color:#7A4A00;">CSS</a>
+                        <a href="#" class="text-decoration-none rounded-pill px-3 py-2" style="background-color:#FFCC80; color:#7A4200;">JavaScript</a>
+                        <a href="#" class="text-decoration-none rounded-pill px-3 py-2" style="background-color:#FFAB40; color:#5c3300;">React</a>
+                        <a href="#" class="text-decoration-none rounded-pill px-3 py-2" style="background-color:#FFE0B2; color:#7A4A0B;">PostgreSQL</a>
+                    </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="border-top mt-4 py-4 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>UniAsk</h5>
+                <p class="text-muted small">Платформа для вопросов и ответов</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Разделы</h5>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-decoration-none text-muted">Главная</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Вопросы</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Теги</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Полезное</h5>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-decoration-none text-muted">О проекте</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Контакты</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Помощь</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="text-center text-muted small mb-0">© 2026 UniAsk. Все права защищены.</p>
+    </div>
+</footer>
+
+    <script src="static/bootstrap.bundle.min.js"></script>
+</body>
+</html>

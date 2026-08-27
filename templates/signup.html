@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="d-flex justify-content-center">
+        <div class="card shadow-sm" style="max-width: 420px; width: 100%;">
+            <div class="card-body p-4">
+                <h4 class="mb-4 text-center">Регистрация</h4>
+
+                <div class="text-center mb-3">
+                    <img src="{% static 'me.jpg' %}" width="72" height="72" class="rounded-circle object-fit-cover">
+                </div>
+
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Логин</label>
+                        <input type="text" class="form-control" maxlength="150" placeholder="Придумайте логин">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control is-invalid" maxlength="254" placeholder="you@example.com">
+                        <div class="invalid-feedback">
+                            Введите корректный email.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Пароль</label>
+                        <input type="password" class="form-control" maxlength="128" placeholder="Введите пароль">
+                        <div class="form-text">Минимум 8 символов.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Подтверждение пароля</label>
+                        <input type="password" class="form-control" maxlength="128" placeholder="Повторите пароль">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Аватар</label>
+                        <input type="file" class="form-control">
+                    </div>
+
+                    <button type="submit" class="btn w-100 rounded-pill fw-semibold" style="background-color:#FFD180; color:#7A4A00;">
+                        Зарегистрироваться
+                    </button>
+                </form>
+
+                <p class="text-center text-muted small mt-3 mb-0">
+                    Уже есть аккаунт? <a href="{% url 'login' %}">Войти</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

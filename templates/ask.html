@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="d-flex justify-content-center">
+        <div class="card shadow-sm" style="max-width: 640px; width: 100%;">
+            <div class="card-body p-4">
+                <h4 class="mb-4 text-center">Задать вопрос</h4>
+
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Заголовок</label>
+                        <input type="text" class="form-control is-invalid" maxlength="200" placeholder="Коротко сформулируйте вопрос">
+                        <div class="invalid-feedback">
+                            Заголовок обязателен и не должен превышать 200 символов.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Текст вопроса</label>
+                        <textarea class="form-control" rows="6" maxlength="5000" placeholder="Опишите свой вопрос подробнее..."></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Теги</label>
+                        <input type="text" class="form-control" maxlength="100" placeholder="python, django, bootstrap">
+                        <div class="form-text">Через запятую, до 100 символов.</div>
+                    </div>
+
+                    <button type="submit" class="btn w-100 rounded-pill fw-semibold" style="background-color:#FFD180; color:#7A4A00;">
+                        Опубликовать
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

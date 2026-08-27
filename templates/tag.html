@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <h4 class="mb-4">Вопросы по тегу: #{{ tag_name }}</h4>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+                <img src="{% static 'lysyy.jpg' %}" width="48" height="48" class="rounded-circle object-fit-cover me-2">
+                <span class="fw-semibold text-muted me-5 fs-5">Митяй</span>
+                <h5 class="mb-0">Вопрос с тегом #{{ tag_name }} — заглушка для примера</h5>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <a href="#" class="btn rounded-pill fw-semibold" style="background-color:#FFD180; color:#7A4A00;">
+                    Ответы | 3
+                </a>
+                <a href="{% url 'tag' tag_name=tag_name %}" class="text-decoration-none rounded-pill px-3 py-2">
+                    #{{ tag_name }}
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

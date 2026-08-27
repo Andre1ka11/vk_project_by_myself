@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-
+{% load static %}
 <head> 
     <meta charset="UTF-8">
     <title>UniAsk</title>
-    <link href="static/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
     <link rel="icon" href="https://img.magnific.com/free-psd/cartoon-question-mark-isolated_23-2151568565.jpg?semt=ais_hybrid&w=740&q=80"  type="image/jpeg">
 </head>
 
@@ -14,8 +14,8 @@
             <div class="container-fluid">
 
                 <!-- Логотип -->
-                <a class="navbar-brand fw-bold" href="index.html">UniAsk</a>
-                <img src="photo.png" alt="avatar" width="32" height="32" class="rounded-circle" style="margin-left: -4px;" >
+                <a class="navbar-brand fw-bold" href="{% url 'index' %}">UniAsk</a>
+                <img src="{% static 'photo.png' %}" alt="avatar" width="32" height="32" class="rounded-circle" style="margin-left: -4px;" >
                 <!-- Кнопка-бургер для мобильных экранов -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@
                         <li class="nav-item dropdown">
                             
                             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="me.jpg"  width="40" height="40" class="rounded-circle me-2">
+                                <img src="{% static 'me.jpg' %}"  width="40" height="40" class="rounded-circle me-2">
                                 Андрей
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
@@ -57,9 +57,10 @@
         <div class="row">
             <!-- Левая колонка -->
             <div class="col-10">
-                <!-- Здесь будет основной контент страницы -->
-                <p class="text-muted">Основной контент страницы</p>
+                {% block content %}
+                {% endblock %}
             </div>
+
 
              <aside class="col-2">
                 <!-- Популярные теги -->
@@ -108,6 +109,6 @@
     </div>
 </footer>
 
-    <script src="static/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

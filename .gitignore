@@ -1,0 +1,7 @@
+venv/
+myworld/
+__pycache__/
+*.pyc
+db.sqlite3
+.idea/
+bootstrap-5.3.8-dist.zip
